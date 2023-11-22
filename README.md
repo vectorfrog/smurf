@@ -17,16 +17,19 @@ Terminal UI app that allows you to select a random code name for a project, as w
       | list of topics |           | list of code names for topic |
     -------------------------------------------------------------------
 
-- [.] Create DB
-  - [ ] Code Names belongs to Topic
-  - [ ] Topic has many Code Names
-- [ ] IEX App
-  - [ ] Get list of topics
-  - [ ] Get list of code names for topic
-  - [ ] Create new topic
-  - [ ] Create new code names for topic
-  - [ ] Delete code name
-  - [ ] Delete Topic -> deletes all code names for topic
+- [X] Create DB
+  - [X] Code Names belongs to Topic
+  - [X] Topic has many Code Names
+- [.] IEX App
+  - [X] Create new topic
+  - [X] Create new code names for topic
+  - [X] Get list of topics
+  - [X] Get list of all code names
+  - [X] Get list of code names for topic
+  - [X] Delete code name
+  - [X] Delete Topic -> deletes all code names for topic
+  - [X] Update code name
+  - [X] Update topic name
 - [ ] Terminal UI
   - [ ] Display random code name
   - [ ] Display random code name from topic

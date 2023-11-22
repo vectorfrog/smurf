@@ -11,6 +11,7 @@ defmodule Smurf.CodeName do
   def changeset(code_name, params \\ %{}) do
     code_name
     |> cast(params, [:name])
-    |> validate_required([:name])
+    |> cast_assoc(:topic)
+    |> validate_required([:name, :topic])
   end
 end
