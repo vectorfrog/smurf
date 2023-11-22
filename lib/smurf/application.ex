@@ -10,12 +10,19 @@ defmodule Smurf.Application do
     children = [
       # Starts a worker by calling: Smurf.Worker.start_link(arg)
       # {Smurf.Worker, arg}
-      {Smurf.Repo, []}
+      {Smurf.Repo, []},
+      {Ratatouille.Runtime.Supervisor, runtime: [app: SmurfTui, shutdown: {:application, :smurf}]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Smurf.Supervisor]
     Supervisor.start_link(children, opts)
+  end
+
+  @impl true
+  def stop(_state) do
+    # do a hard shutdown after the app is stopped
+    System.halt()
   end
 end

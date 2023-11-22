@@ -22,7 +22,8 @@ defmodule Smurf.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ecto_sqlite3, "~> 0.12"}
+      {:ecto_sqlite3, "~> 0.12"},
+      {:ratatouille, "~> 0.5.0"}
     ]
   end
 end

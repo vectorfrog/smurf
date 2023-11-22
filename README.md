@@ -30,7 +30,7 @@ Terminal UI app that allows you to select a random code name for a project, as w
   - [X] Delete Topic -> deletes all code names for topic
   - [X] Update code name
   - [X] Update topic name
-- [ ] Terminal UI
+- [.] Terminal UI
   - [ ] Display random code name
   - [ ] Display random code name from topic
   - [ ] Display list of topics
@@ -41,3 +41,6 @@ Terminal UI app that allows you to select a random code name for a project, as w
     - [ ] Are you sure? y/n
   - [ ] Delete Topic -> deletes all code names for topic
     - [ ] Are you sure? y/n
+
+notes:
+followed this tutorial: [ ratatouille_todo_app ]( https://dev.to/katafrakt/writing-tui-with-ratatouille-337g )

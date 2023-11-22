@@ -1,9 +1,11 @@
 defmodule Smurf do
   alias Smurf.{CodeName, Topic, Repo}
   import Ecto.Query
+
   # ---------------------------------------- #
   # --------------- Topics ----------------- #
   # ---------------------------------------- #
+
   def add_topic(str) when is_binary(str), do: Repo.insert!(%Topic{name: str})
   def add_topic(%Topic{} = t), do: Repo.insert!(t)
   def all_topics(), do: Repo.all(Topic)
@@ -16,6 +18,7 @@ defmodule Smurf do
   # ---------------------------------------- #
   # -------------- CodeNames --------------- #
   # ---------------------------------------- #
+
   def add_codename(str, %Topic{} = topic) when is_binary(str),
     do: Repo.insert!(%CodeName{name: str, topic: topic})
 
