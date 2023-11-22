@@ -10,6 +10,7 @@ defmodule Smurf.Application do
     children = [
       # Starts a worker by calling: Smurf.Worker.start_link(arg)
       # {Smurf.Worker, arg}
+      {Smurf.Repo, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
