@@ -20,7 +20,7 @@ Terminal UI app that allows you to select a random code name for a project, as w
 - [X] Create DB
   - [X] Code Names belongs to Topic
   - [X] Topic has many Code Names
-- [.] IEX App
+- [X] IEX App
   - [X] Create new topic
   - [X] Create new code names for topic
   - [X] Get list of topics
