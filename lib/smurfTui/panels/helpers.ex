@@ -1,7 +1,7 @@
 defmodule SmurfTui.Panels.Helpers do
   import Ratatouille.View
-  def label_style(x, x), do: [background: :green]
-  def label_style(_, _), do: [background: :default]
+  def bg_style(x, x), do: [background: :green]
+  def bg_style(_, _), do: [background: :default]
   def title_style(x, x), do: [color: :green]
   def title_style(_, _), do: [color: :default]
 
@@ -16,4 +16,16 @@ defmodule SmurfTui.Panels.Helpers do
   end
 
   def print_key(%{}), do: ~s(type: nil mod: nil key: nil ch: nil)
+
+  def change_index(_list, nil, _move), do: 0
+
+  def change_index(list, index, move) do
+    l = length(list)
+
+    if index + move < 0 do
+      l - 1
+    else
+      rem(index + move, l)
+    end
+  end
 end

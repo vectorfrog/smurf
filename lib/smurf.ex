@@ -8,7 +8,8 @@ defmodule Smurf do
 
   def add_topic(str) when is_binary(str), do: Repo.insert!(%Topic{name: str})
   def add_topic(%Topic{} = t), do: Repo.insert!(t)
-  def all_topics(), do: Repo.all(Topic)
+  def all_topics(), do: Repo.all(Topic) |> Repo.preload(:codenames)
+  def get_topic(%Topic{} = t), do: Repo.get!(Topic, t.id) |> Repo.preload(:codenames)
   def delete_topic(%Topic{} = t), do: Repo.delete(t)
 
   def update_topic(%Topic{} = t, str) do
