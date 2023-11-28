@@ -3,31 +3,18 @@ defmodule SmurfTui do
 
   import Ratatouille.View
   alias SmurfTui.Panels
+  alias SmurfTui.Panels.Topic
+  alias SmurfTui.Panels.CodeNames
 
   # color reference > :black, :blue, :cyan, :default, :green, :magenta, :red, :white, :yellow
   @panels [:word, :topics, :codenames]
 
   @impl true
   def init(model) do
-    topic_panel = %{
-      topics: Smurf.all_topics(),
-      index: nil,
-      add_topic: false,
-      active: %Smurf.Topic{codenames: []},
-      new: ""
-    }
-
-    codename_panel = %{
-      index: nil,
-      add_codename: false,
-      active: %Smurf.CodeName{},
-      new: ""
-    }
-
     model
-    |> Map.put(:topics_panel, topic_panel)
-    |> Map.put(:codename_panel, codename_panel)
-    |> Map.put(:word, Smurf.all_codenames() |> Enum.random() |> Map.get(:name))
+    |> Map.put(:topics, SmurfTui.Panels.Topic.model())
+    |> Map.put(:codenames, SmurfTui.Panels.CodeNames.model(%{codenames: []}))
+    |> Map.put(:word, SmurfTui.Panels.Word.model())
     |> Map.put(:key, %{})
     |> Map.put(:active_panel, :word)
   end
@@ -44,9 +31,9 @@ defmodule SmurfTui do
         tab_action(model, -1)
         |> Map.put(:key, map)
 
-      #      {%{active_panel: :word}, msg} ->
-      #        Panels.update_word(model, msg)
-      #
+      {%{active_panel: :word}, msg} ->
+        Panels.update_word(model, msg)
+
       {%{active_panel: :topics}, msg} ->
         Panels.update_topics(model, msg)
 
@@ -73,8 +60,8 @@ defmodule SmurfTui do
       Panels.word(model)
 
       row do
-        Panels.topic(model)
-        Panels.codenames(model)
+        Topic.render(model)
+        CodeNames.render(model)
       end
     end
   end

@@ -16,16 +16,4 @@ defmodule SmurfTui.Panels.Helpers do
   end
 
   def print_key(%{}), do: ~s(type: nil mod: nil key: nil ch: nil)
-
-  def change_index(_list, nil, _move), do: 0
-
-  def change_index(list, index, move) do
-    l = length(list)
-
-    if index + move < 0 do
-      l - 1
-    else
-      rem(index + move, l)
-    end
-  end
 end

@@ -33,6 +33,7 @@ defmodule Smurf do
   def delete_codename(%CodeName{} = c), do: Repo.delete(c)
 
   def update_codename(%CodeName{} = c, str) do
-    c |> CodeName.changeset(%{name: str}) |> Repo.update()
+    c |> Repo.preload(:topic) |> CodeName.changeset(%{name: str}) |> Repo.update()
+    #    c |> CodeName.changeset(%{name: str}) |> Repo.update()
   end
 end

@@ -5,13 +5,20 @@ defmodule Smurf.Application do
 
   use Application
 
+  @rat_server {Ratatouille.Runtime.Supervisor,
+               runtime: [
+                 app: SmurfTui,
+                 shutdown: {:application, :smurf},
+                 quit_events: [{:key, Ratatouille.Constants.key(:ctrl_d)}]
+               ]}
+
   @impl true
   def start(_type, _args) do
     children = [
       # Starts a worker by calling: Smurf.Worker.start_link(arg)
       # {Smurf.Worker, arg}
       {Smurf.Repo, []},
-      {Ratatouille.Runtime.Supervisor, runtime: [app: SmurfTui, shutdown: {:application, :smurf}]}
+      @rat_server
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
