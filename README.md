@@ -17,32 +17,14 @@ Terminal UI app that allows you to select a random code name for a project, as w
       | list of topics |           | list of code names for topic |
     -------------------------------------------------------------------
 
-- [X] Create DB
-  - [X] Code Names belongs to Topic
-  - [X] Topic has many Code Names
-- [X] IEX App
-  - [X] Create new topic
-  - [X] Create new code names for topic
-  - [X] Get list of topics
-  - [X] Get list of all code names
-  - [X] Get list of code names for topic
-  - [X] Delete code name
-  - [X] Delete Topic -> deletes all code names for topic
-  - [X] Update code name
-  - [X] Update topic name
-- [.] Terminal UI
-  - [X] Display random code name
-  - [X] Display new random code name with spacebar
-  - [ ] Display random code name from topic
-  - [X] Display list of topics
-  - [.] Display list of code names for topic
-  - [X] Create new topic
-  - [X] Create new code names for topic
-    - [X] can backspace while typing code name
-  - [X] Delete code name
-    - [ ] Are you sure? y/n -> won't do?
-  - [X] Delete Topic -> deletes all code names for topic
-    - [ ] Are you sure? y/n -> won't do?
+## Todos:
+- [X] add help bottom bar
+
+## Possible Future Features:
+
+- [ ] No duplicates within a topic
+- [ ] code word check out, once a code word is used, it's removed from the list of possible code words.
+- [ ] code word project description, when a code word is checked out, a brief project description is added with link to code repo.
 
 notes:
 followed this tutorial: [ ratatouille_todo_app ]( https://dev.to/katafrakt/writing-tui-with-ratatouille-337g )

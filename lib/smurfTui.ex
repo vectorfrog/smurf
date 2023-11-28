@@ -56,7 +56,7 @@ defmodule SmurfTui do
 
   @impl true
   def render(model) do
-    view(top_bar: Panels.topbar(model)) do
+    view(top_bar: Panels.topbar(model), bottom_bar: Panels.bottombar(model)) do
       Panels.word(model)
 
       row do

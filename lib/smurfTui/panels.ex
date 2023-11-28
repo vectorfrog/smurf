@@ -6,4 +6,5 @@ defmodule SmurfTui.Panels do
   defdelegate update_word(model, msg), to: SmurfTui.Panels.Word
   defdelegate word(model), to: SmurfTui.Panels.Word
   defdelegate topbar(model), to: SmurfTui.Panels.Helpers
+  defdelegate bottombar(model), to: SmurfTui.Panels.Helpers
 end
