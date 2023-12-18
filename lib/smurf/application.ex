@@ -5,20 +5,19 @@ defmodule Smurf.Application do
 
   use Application
 
-  @rat_server {Ratatouille.Runtime.Supervisor,
-               runtime: [
-                 app: SmurfTui,
-                 shutdown: {:application, :smurf},
-                 quit_events: [{:key, Ratatouille.Constants.key(:ctrl_d)}]
-               ]}
-
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: Smurf.Worker.start_link(arg)
-      # {Smurf.Worker, arg}
-      {Smurf.Repo, []},
-      @rat_server
+      SmurfWeb.Telemetry,
+      Smurf.Repo,
+      {DNSCluster, query: Application.get_env(:smurf, :dns_cluster_query) || :ignore},
+      {Phoenix.PubSub, name: Smurf.PubSub},
+      # Start the Finch HTTP client for sending emails
+      {Finch, name: Smurf.Finch},
+      # Start a worker by calling: Smurf.Worker.start_link(arg)
+      # {Smurf.Worker, arg},
+      # Start to serve requests, typically the last entry
+      SmurfWeb.Endpoint
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
@@ -27,9 +26,11 @@ defmodule Smurf.Application do
     Supervisor.start_link(children, opts)
   end
 
+  # Tell Phoenix to update the endpoint configuration
+  # whenever the application is updated.
   @impl true
-  def stop(_state) do
-    # do a hard shutdown after the app is stopped
-    System.halt()
+  def config_change(changed, _new, removed) do
+    SmurfWeb.Endpoint.config_change(changed, removed)
+    :ok
   end
 end

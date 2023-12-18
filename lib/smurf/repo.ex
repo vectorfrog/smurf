@@ -1,3 +1,8 @@
 defmodule Smurf.Repo do
-  use Ecto.Repo, otp_app: :smurf, adapter: Ecto.Adapters.SQLite3
+  use AshPostgres.Repo,
+    otp_app: :smurf
+
+  def installed_extensions() do
+    ["uuid-ossp", "citext"]
+  end
 end
