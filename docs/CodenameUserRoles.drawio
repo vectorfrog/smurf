@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" modified="2023-12-18T16:07:15.278Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="LEpSPR82cYmBO_vqIz8m" version="22.1.11" type="github">
+  <diagram name="Page-1" id="kJpY3ilDGnowBHO4v4y1">
+    <mxGraphModel dx="954" dy="1020" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QAVlSyjunz077ZY-CYll-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QAVlSyjunz077ZY-CYll-1" target="QAVlSyjunz077ZY-CYll-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-1" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.user;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-2" value="Project Lead" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="120" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-5" value="Select/Create Codename" style="whiteSpace=wrap;html=1;verticalAlign=top;strokeColor=#0080F0;labelBackgroundColor=#ffffff;strokeWidth=2;shadow=0;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="165" y="52" width="120" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QAVlSyjunz077ZY-CYll-8" target="QAVlSyjunz077ZY-CYll-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-8" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.user;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-9" value="Executive" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="35" y="240" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-10" value="Understand Project Details from Codename" style="whiteSpace=wrap;html=1;verticalAlign=top;strokeColor=#0080F0;labelBackgroundColor=#ffffff;strokeWidth=2;shadow=0;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="165" y="166" width="120" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QAVlSyjunz077ZY-CYll-12" target="QAVlSyjunz077ZY-CYll-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-12" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.user;" vertex="1" parent="1">
+          <mxGeometry x="43" y="280" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-13" value="Employee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="38" y="360" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QAVlSyjunz077ZY-CYll-14" value="Lookup Project by Codename" style="whiteSpace=wrap;html=1;verticalAlign=top;strokeColor=#0080F0;labelBackgroundColor=#ffffff;strokeWidth=2;shadow=0;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="168" y="292" width="120" height="45" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
